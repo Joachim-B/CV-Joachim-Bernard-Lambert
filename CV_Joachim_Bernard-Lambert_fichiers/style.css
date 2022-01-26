@@ -1,0 +1,251 @@
+body {
+    max-width: 760px;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8em;
+}
+
+#bloc_titre {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color : #FEEAA1;
+    max-width: 760px;
+}
+
+#bloc_titre > div {
+    width: 190px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#bloc_titre h1 {
+    color: #D6955B;
+}
+
+#bloc_titre h2 {
+    color: #226D68;
+}
+
+
+#jojo {
+    background-color: #ECF8F6;
+    text-align: center;
+    font-size: 0.8em;
+    height: 230px;
+}
+#presentation {
+    background-color: #226D68;
+    text-align: justify;
+    height: 230px;
+}
+#contact {
+    background-color: #18534F;
+    height: 230px;
+}
+
+#contact a {
+    color: #FEEAA1;
+}
+
+#contact ul {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+#photo {
+    background-color: #ECF8F6;
+    background-image: url(image-cv.jpg);
+    background-size: 115%;
+    background-position: center;
+    padding: 0px;
+    box-sizing: content-box;
+    height: 230px;
+}
+
+#photo img {
+    display: none;
+}
+
+ul {
+    padding-left: 15px;
+    margin: 0;
+}
+
+li {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+p {
+    margin-top: 12px;
+    margin-bottom: 12px ;
+}
+
+
+.container-corps {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 760px;
+    margin-bottom: 20px;
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-corps h1 {
+    background-color: #18534F;
+    color: #FEEAA1;
+    font-size: 1rem;
+    padding : 2px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.main_content {
+    color: #226D68;
+    width: 340px;
+    padding : 22px;   
+    box-sizing:border-box;
+    padding-bottom: 25px;
+    background-color: #ECF8F6;
+    text-align: justify;
+    min-width: 300px;
+}
+
+.main_content b, .main_content ::marker {
+    color: #D6955B;
+}
+
+.main_content a {
+    color: #D6955B;
+}
+
+#pdf {
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px black;
+  padding: 8px;
+  box-sizing: border-box;
+  height: 60px;
+  background-color: white;
+  opacity: 50%;
+}
+
+#pdf img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+#pdf:hover {
+  opacity: 100%;
+}
+
+@media (max-width: 780px) {
+    #bloc_titre {
+        max-width: 440px;
+
+    }
+    .container-corps {
+        flex-flow: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #pdf {
+      opacity: 100%;
+      top: unset;
+      bottom: 25px;
+    }
+}
+
+@media (max-width: 430px) {
+    #bloc_titre {
+        max-width: 350px;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #bloc_titre > div {
+        width: 300px;
+    }
+
+    #presentation {
+        padding: 20px;
+    }
+
+    #photo {
+        height: 340px;
+    }
+
+    .main_content {
+      width: 300px;
+    }
+
+    #pdf {
+      height: 50px;
+      right: 12px;
+    }
+
+}
+
+
+
+@media print {
+    @page {
+      margin: 0;
+      size: auto;
+    }
+    body {
+    -webkit-print-color-adjust: exact !important;
+    padding: 1cm;
+    font-size: 0.75em;
+    }
+
+    #bloc_titre {
+      max-width: 760px;
+      margin-top: 0; 
+    }
+    #bloc_titre > div {
+      width: 25%;
+    }
+
+    .container-corps {
+      max-width: 100%;
+      flex-flow: row;
+      justify-content: space-around;
+      align-items: stretch;
+      margin-bottom: 0;
+    }
+
+    .main_content {
+        max-width: 45%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .main_content a {
+    color: #226D68;
+    }
+    
+    #pdf {
+      display: none;
+    }
+}
